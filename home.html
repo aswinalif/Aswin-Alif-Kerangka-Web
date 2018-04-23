@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="bootstrap-3.3.7/docs/assets/js/vendor/jquery.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="index.png">
+  <div class="card-head">
+  </div>
+</div>
+	<title>Home</title>
+	<link rel=”icon” type=”image/png” href="title-pict.png">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+		<div class="col-md-9">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h2 class="panel-title">PyLearn</h2>
+				</div>
+				<div class="panel-body">
+					<div class="container-fluid">
+						<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for you e-book..." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:100%;">E-Book List</th>
+  </tr>
+  <tr>
+    <td>1. Hello World</td>
+  </tr>
+  <tr>
+    <td>2. Data Type</td>
+  </tr>
+  <tr>
+    <td>3. Type Conversion</td>
+  </tr>
+  <tr>
+    <td>4. Arithmethic Operator</td>
+  </tr>
+  <tr>
+    <td>5. Comparison Operator</td>
+  </tr>
+  <tr>
+    <td>6. Logical Operator</td>
+  </tr>
+  <tr>
+    <td>7. Bitwise Operator</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+					</div>
+				</div>
+			</div>
+		</div>						
+<div class="row">
+    <div class="col-md-3">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+        <center><h3 class="panel-title">Account</h3></center>
+        </div>
+        <div class="panel-body">
+          <h5>Name : Aswin Alif</h5>
+          <h5>Nim  : 04216027</h5>
+          <h5>Email: rezaqosim@gmail.com</h5></br>
+          <a href="index.html" class="btn btn-info" role="button">Log Out</a> 
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</body>
+</html>
